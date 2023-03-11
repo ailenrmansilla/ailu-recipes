@@ -1,0 +1,20 @@
+{
+  "name": "ailu-recipes",
+  "version": "1.0.0",
+  "description": "A website of international recipes for the food lovers.",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ailenrmansilla/ailu-recipes.git"
+  },
+  "author": "Ailen Mansilla <man22007@byui.edu>",
+  "bugs": {
+    "url": "https://github.com/ailenrmansilla/ailu-recipes/issues"
+  },
+  "dependencies": {
+    "parcel": "^2.8.3"
+  }
+}
