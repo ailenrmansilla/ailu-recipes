@@ -557,9 +557,76 @@ function hmrAccept(bundle, id) {
 }
 
 },{}],"8lqZg":[function(require,module,exports) {
-const helloNode = document.createElement("h1");
-helloNode.textContent = "Hello World";
-document.getElementById("root").appendChild(helloNode);
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _app = require("./App");
+var _appDefault = parcelHelpers.interopDefault(_app);
+document.getElementById("root").appendChild((0, _appDefault.default)());
+
+},{"./App":"2kQhy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2kQhy":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _utils = require("./utils");
+function App() {
+    const header = (0, _utils.createElement)("h1", {
+        textContent: "Ailu Recipes",
+        className: "heading"
+    });
+    const main = (0, _utils.createElement)("main", {});
+    return (0, _utils.createElement)("div", {}, [
+        header,
+        main
+    ]);
+}
+exports.default = App; // it returns that last createElement (the whole div)
+ // I can keep using functions like that to develop the structure of the website
+
+},{"./utils":"en4he","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"en4he":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "createElement", ()=>createElement);
+function createElement(type, props = {}, children = []) {
+    const element = document.createElement(type);
+    //the function receives type, text content, child
+    // props: {textContent: "Hello world!", id: "header1", "data-productId": 123, ...}
+    Object.entries(props).forEach(([key, value])=>{
+        if (~key.indexOf("-")) element.setAttribute(key, value); // data attributes
+        else element[key] = value;
+    });
+    children.forEach((child)=>{
+        element.appendChild(child);
+    });
+    return element;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
 },{}]},["jC2qd","8lqZg"], "8lqZg", "parcelRequire707e")
 
