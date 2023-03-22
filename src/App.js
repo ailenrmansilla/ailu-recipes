@@ -1,15 +1,33 @@
 import { createElement } from './utils';
+import { initRouter } from './router';
 
 
-function App() {
-  const appTitle = createElement('h1', {textContent: 'Ailu Recipes', className: 'heading'});
-  const header = createElement('header',{}, [appTitle])
-  const main = createElement('main', {});
+function Header(mainDiv) {
+  const logo = createElement('img', {src:"#", alt: "Ailu recipes logo"});
+  const websiteTitle = createElement('h1', {textContent: 'Ailu Recipes', className: 'heading'});
+  const login = createElement('a', {href:"/#/login", textContent: "Log in"})
+  
+  // nav items
+  const home = createElement('a',{href:"/#/page1", textContent: "Home"});
+  const meals = createElement('a',{href:"/#/page2", textContent: "Meals"});
+  const countries = createElement('a',{href:"/#/page3", textContent: "Country"});
 
-  const copyright = createElement('span',{textContent: `Copyright &copy; ${new Date().getFullYear()}`, })
-  const footer = createElement('footer',{}, [copyright]);
+  const nav = createElement('nav',{},[home, meals, countries]);
+  
+  return createElement('header',{}, [logo, websiteTitle, nav, login]);
+}
 
-  return createElement('div', {}, [header, main, footer]); 
+function Footer(){
+  const copyright = createElement('span',{textContent: `Copyright &copy;${new Date().getFullYear()}`, })
+  
+  return createElement('footer',{}, [copyright]);
+}
+
+function App(){
+  const main = createElement('main', {},[]);
+  initRouter(main);
+
+  return createElement('div', {}, [Header(main), main, Footer()]); 
 }
 
 export default App; // it returns that last createElement (the whole div)
