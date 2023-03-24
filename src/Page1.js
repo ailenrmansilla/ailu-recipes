@@ -1,4 +1,4 @@
-// just update the main div
+// HOME VIEW
 import { createElement } from './utils';
 
 function Home() {

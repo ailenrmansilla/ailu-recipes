@@ -1,5 +1,8 @@
+// MAIN APP CONTROLLER
+
 import { createElement } from './utils';
 import { initRouter } from './router';
+import ExternalServices from "./ExternalServices.mjs";
 
 
 function Header(mainDiv) {
@@ -18,7 +21,7 @@ function Header(mainDiv) {
 }
 
 function Footer(){
-  const copyright = createElement('span',{textContent: `Copyright &copy;${new Date().getFullYear()}`, })
+  const copyright = createElement('span',{textContent: `Copyright ©${new Date().getFullYear()}`, })
   
   return createElement('footer',{}, [copyright]);
 }

@@ -1,4 +1,4 @@
-// just update the main div
+// RECIPES ORGANIZED BY COUNTRY OF ORIGIN
 import { createElement } from './utils';
 
 function Countries() {
@@ -11,16 +11,16 @@ function Countries() {
   const mexico = createElement('button', {type:'button', id:'mexico-button', textContent: 'Mexican'});
   mexico.addEventListener("click", function(){});
 
-  const peru = createElement('button', {type:'button', id:'peru-button', textContent: 'Peruvian'});
-  peru.addEventListener("click", function(){});
+  const italy = createElement('button', {type:'button', id:'italy-button', textContent: 'Italian'});
+  italy.addEventListener("click", function(){});
 
-  const spain = createElement('button', {type:'button', id:'spain-button', textContent: 'Spanish'});
-  spain.addEventListener("click", function(){});
+  const british = createElement('button', {type:'button', id:'british-button', textContent: 'British'});
+  british.addEventListener("click", function(){});
 
-  const argentina = createElement('button', {type:'button', id:'argentina-button', textContent: 'Argentinian'});
-  argentina.addEventListener("click", function(){});
+  const south_america = createElement('button', {type:'button', id:'south-a-button', textContent: 'South American'});
+  south_america.addEventListener("click", function(){});
 
-  const countries = createElement('div',{id:'countries'},[china, mexico, peru, spain, argentina]);
+  const countries = createElement('div',{id:'countries'},[china, mexico, italy, british, south_america]);
 
   return createElement('div', {}, [title, explanation, countries]);
 }
