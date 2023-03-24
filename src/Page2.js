@@ -23,9 +23,9 @@ function Kindofmeal() {
 
   const breakfast = createElement('button', {type:'button', id:'breakfast-button', textContent: 'Breakfast'});
   // display breakfast recipes 
-  breakfast.addEventListener("click", function(){
+  breakfast.addEventListener("click", async function(){
     let page = document.getElementById('meals-page');
-    results = displayListMealType('Breakfast');
+    results = await displayListMealType('Breakfast');
     console.log(results); // I can't see this in the console
     // There is an error with this function
     results.forEach(result => {
