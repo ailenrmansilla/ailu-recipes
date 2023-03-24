@@ -1,3 +1,5 @@
+import {createElement} from './utils';
+
 // function that creates a recipe structure
 export function createRecipe(recipe_name, recipe_picture, recipe_calories, recipe_ingredients, recipe_steps){
     const title = createElement('h2',{textContent: `${recipe_name}`});
