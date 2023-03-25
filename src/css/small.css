@@ -10,6 +10,7 @@ html {
 body{
     /* background-image: url('../src/images/'); */
     background-color: #EB4511;
+    font-size: 15px;
 }  
 header, nav, main{
     padding: 1rem;
@@ -32,6 +33,14 @@ a {
     text-decoration: none;
     color: #34344A;
 }
+button{
+    background-color: #B02E0C;
+    color:#D6CA98;
+    font-weight: bold;
+    padding: 1rem;
+    border: 1px #B02E0C solid;
+    border-radius: 30px;
+}
 
 /* HEADER */
 header{
@@ -49,6 +58,11 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 1rem;
+}
+nav a{
+    padding: 1rem;
+    font-weight: bold;
 }
 
 
@@ -63,3 +77,18 @@ footer {
   }
 
 /* MAIN */
+#meals{
+    /* the div where these buttons are */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0.7rem;
+}
+
+.recipe-preview{
+    /* each recipe preview */
+    background-color: #D6CA98;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
