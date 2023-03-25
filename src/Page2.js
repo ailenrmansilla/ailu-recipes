@@ -25,14 +25,14 @@ function Kindofmeal() {
   // display breakfast recipes 
   breakfast.addEventListener("click", async function(){
     let page = document.getElementById('meals-page');
-    results = await displayListMealType('Breakfast');
+    result_meal = await displayListMealType('Breakfast');
+    results = result_meal.hits; // array
     console.log(results); // I can't see this in the console
     // There is an error with this function
     results.forEach(result => {
       page.innerHTML += createRecipesPreview(result)
     });
 
-    // page.appendChild(Content('Breakfast'));
   }); 
   
   const lunch = createElement('button', {type:'button', id:'lunch-button', textContent: 'Lunch'});

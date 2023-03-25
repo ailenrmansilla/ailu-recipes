@@ -1,13 +1,13 @@
 import {createElement} from './utils';
 
 // function that creates a recipe structure
-export function createRecipe(recipe_name, recipe_picture, recipe_calories, recipe_ingredients, recipe_steps){
+export function createRecipe(recipe_name, recipe_picture, recipe_ingredients, recipe_steps){
     const title = createElement('h2',{textContent: `${recipe_name}`});
     const picture = createElement('img',{src: `${recipe_picture}`});
     const ingredients = createElement('p',{textContent: `${recipe_ingredients}`});
     const steps = createElement('p',{id:'recipe-procedure', textContent: `${recipe_steps}`});
 
-    return createElement('div',{className: 'recipe-block'},[title,picture,calories, ingredients, steps]);
+    return createElement('div',{className: 'recipe-block'},[title,picture, ingredients, steps]);
 }
 // function to create a recipe's preview
 export function createRecipesPreview(result){
