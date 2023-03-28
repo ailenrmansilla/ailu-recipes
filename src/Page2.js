@@ -25,23 +25,57 @@ function Kindofmeal() {
   // display breakfast recipes 
   breakfast.addEventListener("click", async function(){
     let page = document.getElementById('meals-page');
+    let section_recipes = document.getElementById('section-recipes');
+    if (section_recipes == null){
+      // check if this section already exists
+      section_recipes = createElement('div',{id:'section-recipes'},[]);
+      page.appendChild(section_recipes);}
+    else{
+      document.getElementById('section-recipes').innerHTML= ""; 
+    }
     results = await displayListMealType('Breakfast');
-    console.log(results); // I can't see this in the console
-    // There is an error with this function
+    console.log(results); // data.hits
     results.forEach(result => {
-      page.innerHTML += createRecipesPreview(result)
+      section_recipes.appendChild(createRecipesPreview(result)); // each recipe (there are 20)
     });
 
   }); 
   
   const lunch = createElement('button', {type:'button', id:'lunch-button', textContent: 'Lunch'});
-  lunch.addEventListener("click", function(){
+  lunch.addEventListener("click", async function(){
+    let page = document.getElementById('meals-page');
+    let section_recipes = document.getElementById('section-recipes');
+    if (section_recipes == null){
+      // check if this section already exists
+      section_recipes = createElement('div',{id:'section-recipes'},[]);
+      page.appendChild(section_recipes);}
+    else{
+      document.getElementById('section-recipes').innerHTML= ""; 
+    }
+    results = await displayListMealType('Lunch'); // data.hits
+    results.forEach(result => {
+      section_recipes.appendChild(createRecipesPreview(result)); // each recipe (there are 20)
+    });
+
   }); 
   
   const dinner = createElement('button', {type:'button', id:'dinner-button', textContent: 'Dinner'});
-  dinner.addEventListener("click", function(){
-  }); 
+  dinner.addEventListener("click", async function(){
+    let page = document.getElementById('meals-page');
+    let section_recipes = document.getElementById('section-recipes');
+    if (section_recipes == null){
+      // check if this section already exists
+      section_recipes = createElement('div',{id:'section-recipes'},[]);
+      page.appendChild(section_recipes);}
+    else{
+      document.getElementById('section-recipes').innerHTML= ""; 
+    }
+    results = await displayListMealType('Dinner'); // data.hits
+    results.forEach(result => {
+      section_recipes.appendChild(createRecipesPreview(result)); // each recipe (there are 20)
+    });
 
+  }); 
   const meals = createElement('div', {id:'meals'}, [breakfast, lunch, dinner]);
 
   return createElement('div', {id:'meals-page'}, [title, explanation, meals]);
