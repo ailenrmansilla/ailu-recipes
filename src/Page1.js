@@ -36,20 +36,20 @@ function Home() {
 
 
   const banner = createElement('img',{src:'#', alt:'plate of spaghetti', id:'banner'})
-  const title = createElement('h2', { textContent: 'Look for a recipe' });
-  const explanation = createElement('p', {textContent: 'You can filter the recipes by country or by kind of meal'});
+  const title = createElement('h2', {id:'title', textContent: 'Look for a recipe' });
+  const explanation = createElement('h3', {textContent: 'You can also filter the recipes by country or by kind of meal'});
+  const comment = createElement('p', {textContent:'We count with lots of food ideas for any meal and style! Start here'});
 
-  // const page3Link = createElement('a', {
-  //   href: '/#/page3',
-  //   textContent: 'Country',
-  // });
-  // const page2Link = createElement('a', {
-  //   href: '/#/page2',
-  //   textContent: 'Meals of the Day',
-  // });
+  const page3Link = createElement('a', {
+    href: '/#/page3',
+    textContent: 'Country',
+  });
+  const page2Link = createElement('a', {
+    href: '/#/page2',
+    textContent: 'Meals of the Day',
+  });
 
-
-  // const categories = createElement('div', {id:'categories'}, [page2Link, page3Link]);
+  const categories = createElement('div', {id:'categories'}, [page2Link, page3Link]);
 
   // const bestrated1 = createElement('li',{id:'bestrated1'});
   // const bestrated2 = createElement('li',{id:'bestrated2'});
@@ -59,7 +59,7 @@ function Home() {
 
 
   // add again the elements I commented out 
-  return createElement('div', {id:'home-page'}, [form, banner, title, explanation]);
+  return createElement('div', {id:'home-page'}, [title, form, banner, explanation, comment, categories]);
 }
 
 export default Home;

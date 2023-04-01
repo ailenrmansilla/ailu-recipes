@@ -37,7 +37,7 @@ function Countries() {
 
   const countries = createElement('div',{id:'countries'},[china, mexico, italy, british, south_america]);
 
-  return createElement('div', {}, [title, explanation, countries]);
+  return createElement('div', {id:'countries-section'}, [title, explanation, countries]);
 }
 
 export default Countries;

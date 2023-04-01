@@ -8,3 +8,8 @@
 #section-recipes{
     margin-top: 30px;
 }
+#search_bar{
+    margin:0 auto;
+    padding: 0.5rem;
+    width: 40%;
+}
