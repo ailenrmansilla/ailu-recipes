@@ -17,6 +17,9 @@ header, nav, main{
     background-color: #D6CA98;
 }
 
+header{
+    max-width: 100%;
+}
 h1,h2,h3 {
     color: #34344A;
     font-size: 1.5rem;
@@ -82,17 +85,32 @@ footer {
     background-color: #34344A;
     text-align: center;
     padding: 1rem;
-    margin: 0.7rem;
     color: #D6CA98;
+    max-width: 100%;
   }
 
 /* MAIN */
+#search_bar_form{
+    background-color: transparent;
+    font-size: 20px;
+    padding: 0.3rem;
+    display: inline-block;
+    border: none;
+    width: 100%;
+    text-align: center;
+}
+#search_bar{
+    margin:0 auto;
+    padding: 0.5rem;
+    width: 70%;
+}
 #meals{
     /* the div where these buttons are */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: 0.7rem;
+    max-width: 100%;
 }
 
 .recipe-preview{
@@ -101,20 +119,21 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 0.5rem;
+    padding: 0.2rem;
     flex-basis: auto;
     justify-content: center;
     align-items: center;
-    max-width: 260px;
+    width: 260px;
+
 }
 
-/* large */
 #section-recipes{
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     justify-content: center;
-    
+    margin-top: 10px;
+    max-width: 100%;
 }
 
 #section-recipes img{
@@ -128,4 +147,8 @@ footer {
     border-radius: 30px;
 }
 
+#section-recipes a:hover{
+    color:#B02E0C;
+    border: 1px #B02E0C solid;
+}
 

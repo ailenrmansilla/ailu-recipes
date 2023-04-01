@@ -3,7 +3,6 @@
 // just update the main div
 import { createElement } from './utils';
 import {
-  createRecipe,
   createRecipesPreview
 } from "./RecipeStructure.mjs";
 import {displayListMealType} from "./ExternalServices.mjs";
@@ -17,6 +16,7 @@ function Content(heading, children = []){
 
 
 function Kindofmeal() {
+  
   const title = createElement('h2', { textContent: 'Recipes by Meals of the Day' });
   const explanation = createElement('p', {textContent: 'Click a meal type to see our recipes'});
 

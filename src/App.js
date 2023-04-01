@@ -30,7 +30,7 @@ function App(){
   const main = createElement('main', {},[]);
   initRouter(main);
 
-  return createElement('div', {}, [Header(main), main, Footer()]); 
+  return createElement('div', {}, [Header(), main, Footer()]); 
 }
 
 export default App; // it returns that last createElement (the whole div)

@@ -1,16 +1,9 @@
 // Fetch JSON stuff
 const url = `https://api.edamam.com/api/recipes/v2?type=public&app_id=08076391&app_key=4194d21e261caece7fca45a54a50bbbc`;
-const id= '08076391';
-const key = '4194d21e261caece7fca45a54a50bbbc';
+const id= 'fed945d5';
+const key = '65748875312f112f35c9f7c872ba502e';
 
-export async function fetchData() {
-    const URL = `https://api.edamam.com/api/recipes/v2?type=public&app_id=08076391&app_key=4194d21e261caece7fca45a54a50bbbc&mealType=Breakfast`;
-    const response = await fetch(URL);
-    const data = await response.json();
-    return data;
-}
 
-// the one I am using right now
 export async function displayListMealType(type) {
   // we want the recipes for a certain meal type
   const link = `${url}&mealType=${type}&imageSize=SMALL`;
@@ -19,3 +12,11 @@ export async function displayListMealType(type) {
   return data.hits; // array of recipes
 
 }
+
+export async function fetchData(userQuery) {
+    const URL = `https://api.edamam.com/api/recipes/v2?q=${userQuery}&type=public&app_id=fed945d5&app_key=65748875312f112f35c9f7c872ba502e`;
+    const response = await fetch(URL);
+    const data = await response.json();
+    return data.hits;
+}
+
