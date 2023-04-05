@@ -54,24 +54,35 @@ button:hover{
 
 /* HEADER */
 header{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 20% 80%;
     align-items: center;
-    
+    overflow-wrap: break-word;
 }
-.logo{
-    max-width: 40%;
+#logo{
+    max-width: 90px;
+    margin: 0.3rem;
+    padding: 0.3rem;
+    grid-column: 1/2;
+}
+.heading{
+    grid-column: 2/3;
+    text-align: center;
+    padding: 0.3rem;
+    margin-left: 0.9rem;
 }
 
 /* NAVIGATION */
 nav{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem;
+    justify-content: space-around;
+    padding: 0.7rem;
+    grid-column: 1/3;
+    grid-row: 2;
 }
 nav a{
-    padding: 1rem;
+    padding: 0.5rem;
     font-weight: bold;
 }
 
@@ -88,6 +99,12 @@ footer {
   }
 
 /* MAIN */
+#banner{
+    max-width: 100%;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 0.7rem;
+}
 #home-page p, #meals-page p, #countries-section p{
     background-color: #34344A;
     color: #D6CA98;
@@ -113,13 +130,13 @@ footer {
     padding: 0.3rem;
     width: 70%;
 }
-/* THIS WILL MOVE TO LARGE VIEW WHEN I ADD SMALL VIEW DESIGN */
-#categories, #countries{
+#categories, #countries, #meals{
     display: inline-block;
-    padding: 0.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding: 0.4rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
     display: flex;
+    flex-flow: column;
     justify-content: space-around;
     align-items: center;
 }
@@ -127,10 +144,11 @@ footer {
     background-color: #B02E0C;
     color:#D6CA98;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 19px;
     padding: 0.7rem;
     border: 1px #671a07 solid;
     border-radius: 30px;
+    margin: 0.4rem;
 
 }
 #categories a:hover, #countries button:hover, #meals button:hover, #countries-section button:hover{
@@ -139,14 +157,6 @@ footer {
     border: 1px #EB4511 solid;
 }
 
-#meals{
-    /* the div where these buttons are */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 1rem;
-    max-width: 100%;
-}
 
 .recipe-preview{
     /* each recipe preview */

@@ -8,7 +8,19 @@
   },
   "author": "Ailen Mansilla <man22007@byui.edu>",
   "dependencies": {
+    "firebase": "^9.19.1",
     "parcel": "^2.8.3",
     "prettier": "^2.8.4"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ailenrmansilla/ailu-recipes.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ailenrmansilla/ailu-recipes/issues"
+  },
+  "homepage": "https://github.com/ailenrmansilla/ailu-recipes#readme"
 }

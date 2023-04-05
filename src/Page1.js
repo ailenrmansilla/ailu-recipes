@@ -32,7 +32,7 @@ function Home() {
     });
   })
 
-  const banner = createElement('img',{src:'/src/images/spaghetti.jpg', alt:'plate of spaghetti', id:'banner'})
+  const banner = createElement('img',{src: require("./images/spaghetti.jpg"), alt:'plate of spaghetti', id:'banner'})
   const title = createElement('h2', {id:'title', textContent: 'Look for a recipe' });
   const explanation = createElement('h3', {textContent: 'You can also filter the recipes by country or by kind of meal'});
   const comment = createElement('p', {textContent:'We count with lots of food ideas for any meal and style! Start here'});

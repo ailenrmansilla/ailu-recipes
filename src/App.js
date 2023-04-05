@@ -5,10 +5,9 @@ import { initRouter } from './router';
 import ExternalServices from "./ExternalServices.mjs";
 
 
-function Header(mainDiv) {
-  const logo = createElement('img', {src:"/images/logo.png", alt: "Ailu recipes logo"});
+function Header() {
+  const logo = createElement('img', {src: require("./images/logo.png"), id:'logo', alt: "Ailu recipes logo"});
   const websiteTitle = createElement('h1', {textContent: 'Ailu Recipes', className: 'heading'});
-  const login = createElement('a', {href:"/#/login", textContent: "Log in"})
   
   // nav items
   const home = createElement('a',{href:"/#/page1", textContent: "Home"});
@@ -17,7 +16,7 @@ function Header(mainDiv) {
 
   const nav = createElement('nav',{},[home, meals, countries]);
   
-  return createElement('header',{}, [logo, websiteTitle, nav, login]);
+  return createElement('header',{}, [logo, websiteTitle, nav]);
 }
 
 function Footer(){
