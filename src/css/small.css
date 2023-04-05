@@ -159,7 +159,12 @@ footer {
     justify-content: center;
     align-items: center;
     width: 260px;
+    border: 1px #624111 solid;
 
+}
+.recipe-preview p{
+    background-color: #624111;
+    color:#D6CA98
 }
 
 #section-recipes{
