@@ -6,7 +6,7 @@ import ExternalServices from "./ExternalServices.mjs";
 
 
 function Header(mainDiv) {
-  const logo = createElement('img', {src:"#", alt: "Ailu recipes logo"});
+  const logo = createElement('img', {src:"/images/logo.png", alt: "Ailu recipes logo"});
   const websiteTitle = createElement('h1', {textContent: 'Ailu Recipes', className: 'heading'});
   const login = createElement('a', {href:"/#/login", textContent: "Log in"})
   
