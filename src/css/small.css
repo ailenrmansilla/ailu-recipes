@@ -103,7 +103,7 @@ footer {
     max-width: 100%;
     align-items: center;
     margin: 0 auto;
-    margin-top: 0.7rem;
+    margin-top: 1rem;
 }
 #home-page p, #meals-page p, #countries-section p{
     background-color: #34344A;
@@ -127,7 +127,7 @@ footer {
 #search_bar{
     background-color: #cecdc8;
     margin:0 auto;
-    padding: 0.3rem;
+    padding: 0.5rem;
     width: 70%;
 }
 #categories, #countries, #meals{

@@ -12,23 +12,3 @@ export function createRecipesPreview(result){
    
     return createElement('div',{className:'recipe-preview'},[title, picture, country, mealType, calories, link]);
 }
-
-// function that creates a recipe structure
-// export function createRecipe(recipe){
-//     const title = createElement('h2',{textContent: `${recipe.label}`});
-//     const picture = createElement('img',{src: `${recipe.images.LARGE.url}`}); // large picture
-//     const calories = createElement('p',{textContent: `Calories: ${Math.round(recipe.calories)}kcal`});
-//     let origin = recipe.cuisineType[0];
-//     let origin_capitalized = origin.chartAt(0).toUpperCase() + origin.slice(1);
-//     const country = createElement('p',{textContent: `Origin: ${origin_capitalized}`});
-//     let ingredients_array = recipe.ingredientLines; // we don't know how long it is
-//     const ingredients = '';
-//     const mealType = createElement('p',{textContent: `Meal Type: ${recipe.mealType}`});
-
-
-//     const steps = createElement('p',{id:'recipe-procedure', textContent: `${recipe.instructions}`}); // not found
-
-//     return createElement('div',{className: 'recipe-block'},[title, picture, calories, country, mealType, ingredients, steps]);
-// }
-
-

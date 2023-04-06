@@ -6,7 +6,7 @@
         align-items: center;
     }
     #logo{
-        max-width: 110px;
+        max-width: 120px;
         margin: 0.3rem;
         padding: 0.4rem;
     }
@@ -36,6 +36,7 @@
         margin:0 auto;
         padding: 0.5rem;
         width: 40%;
+        font-size: 19px;
     }
     #categories a, #countries button, #meals button, #countries-section button{
     font-size: 22px;

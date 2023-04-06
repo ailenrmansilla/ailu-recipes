@@ -18,13 +18,7 @@ function Home() {
 
     let page = document.getElementById('home-page');
     let section_results = document.getElementById('section-recipes');
-    if (section_results == null){
-      // check if this section already exists
-      section_results = createElement('div',{id:'section-recipes'},[]);
-      page.appendChild(section_results);}
-    else{
-      document.getElementById('section-recipes').innerHTML= ""; 
-    }
+    document.getElementById('section-recipes').innerHTML= ""; 
     results = await fetchData(userQuery);
     console.log(results); // data.hits
     results.forEach(result => {
@@ -32,11 +26,12 @@ function Home() {
     });
   })
 
+  let section_results = createElement('div',{id:'section-recipes'},[]);
   const banner = createElement('img',{src: require("./images/spaghetti.jpg"), alt:'plate of spaghetti', id:'banner'})
   const title = createElement('h2', {id:'title', textContent: 'Look for a recipe' });
   const explanation = createElement('h3', {textContent: 'You can also filter the recipes by country or by kind of meal'});
   const comment = createElement('p', {textContent:'We count with lots of food ideas for any meal and style! Start here'});
-
+  
   const page3Link = createElement('a', {
     href: '/#/page3',
     textContent: 'Country',
@@ -56,7 +51,7 @@ function Home() {
 
 
   // add again the elements I commented out 
-  return createElement('div', {id:'home-page'}, [title, form, banner, explanation, comment, categories]);
+  return createElement('div', {id:'home-page'}, [title, form, section_results, banner, explanation, comment, categories]);
 }
 
 export default Home;
